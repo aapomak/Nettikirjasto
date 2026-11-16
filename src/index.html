@@ -1,7 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
   <head>
-    <body>
-      <h1>Posionmäen Kirjasto</h1>
-       
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Posionmäen kirjaston verkkokirjasto – löydä luettavaa ja tutustu kirjaston palveluihin."
+    />
+    <title>Posionmäen kirjasto – Nettikirjasto</title>
+  </head>
+  <body>
+    <div class="topline">Tervetuloa lukemisen äärelle</div>
+
+    <header>
+      <div class="container header-main">
+        <div class="brand" aria-label="Posionmäen kirjasto">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>
+            <span class="brand-name">Posionmäen kirjasto</span>
+            <span class="brand-subtitle">Nettikirjasto</span>
+          </span>
+        </div>
+        <nav aria-label="Sivuston osiot">
+          <span>Etusivu</span>
+          <span>Kirjat ja aineistot</span>
+          <span>Kirjastosta</span>
+          <span>Yhteystiedot</span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <p class="eyebrow">Löydä seuraava lukuelämys</p>
+          <h1>Kirjastossa alkaa monta tarinaa.</h1>
+          <p class="hero-copy">
+            Tutustu kirjoihin, löydä uutta luettavaa ja tule viihtymään
+            Posionmäen kirjastoon.
+          </p>
+          <div class="search-placeholder" aria-label="Kirjahaku paikan varaus">
+            <span class="search-icon" aria-hidden="true"></span>
+            <span>Kirjahaku – tähän tulee hakukenttä</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Selaa aineistoja</h2>
+            <p class="section-note">Poimi kiinnostava aihe ja lähde tutkimaan.</p>
+          </div>
+          <div class="category-grid">
+            <article class="category">
+              <span class="category-number">01 / LUKEMINEN</span>
+              <h3>Kaunokirjallisuus</h3>
+            </article>
+            <article class="category">
+              <span class="category-number">02 / TIETO</span>
+              <h3>Tietokirjat</h3>
+            </article>
+            <article class="category">
+              <span class="category-number">03 / PERHEILLE</span>
+              <h3>Lasten ja nuorten kirjat</h3>
+            </article>
+            <article class="category">
+              <span class="category-number">04 / KUUNTELE</span>
+              <h3>Äänikirjat ja lehdet</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section featured">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Vinkkejä lukemiseen</h2>
+            <p class="section-note">Kirjaston nostoja juuri sinulle.</p>
+          </div>
+          <div class="book-grid">
+            <article class="book">
+              <div class="book-cover" aria-label="Kirjan kansikuvan paikkamerkki">
+                Kirjan kansikuva
+              </div>
+              <h3>Kirjan nimi</h3>
+              <p>Tekijän nimi · Romaani</p>
+            </article>
+            <article class="book">
+              <div class="book-cover" aria-label="Kirjan kansikuvan paikkamerkki">
+                Kirjan kansikuva
+              </div>
+              <h3>Kirjan nimi</h3>
+              <p>Tekijän nimi · Tietokirja</p>
+            </article>
+            <article class="book">
+              <div class="book-cover" aria-label="Kirjan kansikuvan paikkamerkki">
+                Kirjan kansikuva
+              </div>
+              <h3>Kirjan nimi</h3>
+              <p>Tekijän nimi · Lastenkirja</p>
+            </article>
+            <article class="book">
+              <div class="book-cover" aria-label="Kirjan kansikuvan paikkamerkki">
+                Kirjan kansikuva
+              </div>
+              <h3>Kirjan nimi</h3>
+              <p>Tekijän nimi · Äänikirja</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container info-grid">
+          <article class="info-card">
+            <p class="eyebrow">Meillä kirjastossa</p>
+            <h2>Enemmän kuin kirjoja</h2>
+            <p>
+              Kirjasto on kohtaamispaikka, lukemisen koti ja ikkuna uusiin
+              ajatuksiin. Täältä löydät aineistoja, rauhallisen paikan ja
+              ystävällistä apua tiedon etsimiseen.
+            </p>
+          </article>
+          <article class="info-card">
+            <p class="eyebrow">Tule käymään</p>
+            <h2>Aukioloajat</h2>
+            <div class="hours-list">
+              <span>Maanantai–perjantai</span><span>Aukioloajat tähän</span>
+              <span>Lauantai</span><span>Aukioloajat tähän</span>
+              <span>Sunnuntai</span><span>Aukioloajat tähän</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>Posionmäen kirjasto</p>
+        <p class="footer-muted">Posionmäen tie13, 67470 Posionmäki</p>
+        <p class="footer-muted">Puhelin ja sähköposti tähän</p>
+      </div>
+    </footer>
+  </body>
+</html>
