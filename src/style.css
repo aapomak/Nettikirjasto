@@ -356,6 +356,10 @@
         gap: 22px;
       }
 
+      .catalog-category + .catalog-category {
+        margin-top: 40px;
+      }
+
       .book {
         min-width: 0;
       }

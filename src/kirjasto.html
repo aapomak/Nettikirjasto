@@ -3,20 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kirja valikoima</title>
-    <script src="toiminto.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Kirjat – Posionmäen kirjasto</title>
   </head>
   <body>
-    <div class="topline">Kirja valikoima</div>
+    <div class="topline">Tervetuloa lukemisen äärelle</div>
 
     <header>
       <div class="container header-main">
         <div class="brand" aria-label="Posionmäen kirjasto">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>
+            <span class="brand-name">Posionmäen kirjasto</span>
+            <span class="brand-subtitle">Nettikirjasto</span>
+          </span>
         </div>
         <nav aria-label="Sivuston osiot">
           <a href="index.html">Etusivu</a>
-          <a href="kirjasto.html">Kirjat ja aineistot</a>
-          <a href="yhteystiedot.html">Yhteystiedot</a>
         </nav>
       </div>
     </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Kirjat</h2>
+          </div>
+
+          <section class="catalog-category" aria-labelledby="romaanit">
+            <div class="section-heading">
+              <h2 id="romaanit">Romaanit</h2>
+            </div>
+            <div class="book-grid">
+              <article class="book">
+                <img
+                  class="book-cover"
+                  src="kuvat/Mäentie.jpg"
+                  alt="Mäentie-kirjan kansi"
+                  loading="lazy"
+                />
+                <h3>Mäentie</h3>
+                <p>Aapo Mäkinen · Romaani</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="catalog-category" aria-labelledby="elamankerrat">
+            <div class="section-heading">
+              <h2 id="elamankerrat">Elämänkerrat</h2>
+            </div>
+            <div class="book-grid">
+              <article class="book">
+                <img
+                  class="book-cover"
+                  src="kuvat/Harakan_elämä.jpg"
+                  alt="Harakan elämä -kirjan kansi"
+                  loading="lazy"
+                />
+                <h3>Harakan elämä</h3>
+                <p>Kaisa Heikkinen · Elämän kerta</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="catalog-category" aria-labelledby="kauhu">
+            <div class="section-heading">
+              <h2 id="kauhu">Kauhu</h2>
+            </div>
+            <div class="book-grid">
+              <article class="book">
+                <img
+                  class="book-cover"
+                  src="kuvat/Matematiikan_kauhut.jpg"
+                  alt="Matematiikan kauhut -kirjan kansi"
+                  loading="lazy"
+                />
+                <h3>Matematiikan kauhut</h3>
+                <p>Samu Posio · Kauhu</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="catalog-category" aria-labelledby="historia">
+            <div class="section-heading">
+              <h2 id="historia">Historia</h2>
+            </div>
+            <div class="book-grid">
+              <article class="book">
+                <img
+                  class="book-cover"
+                  src="kuvat/Suomen_historia.jpg"
+                  alt="Suomen Historia -kirjan kansi"
+                  loading="lazy"
+                />
+                <h3>Suomen Historia</h3>
+                <p>Mustafa Omar · Historia</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>Posionmäen kirjasto</p>
+      </div>
+    </footer>
+  </body>
+</html>
