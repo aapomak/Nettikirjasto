@@ -1,11 +1,11 @@
 
 // Hakutoiminto, joka etsii kirjoja niiden nimen, tekijän tai aiheen perusteella.
 const books = [
-  // Tähän lisätään kirjoja, muodossa: { title, author, category }.
-  { title: "Harakan elämä", author: "Niko Harakka", category: "Romaani" },
-  { title: "Mäentie", author: "Aapo Mäkinen", category: "Romaani" },
-  { title: "Suomen historia", author: "Mustafa Omar", category: "Historia" },
-  { title: "Matematiikan kauheudet", author: "Samu Posio", category: "Tietokirja" },
+  // Tähän lisätään kirjoja, muodossa: { title, genre, kirjailija }.
+  { title: "Harakan elämä", genre: "Elämän kerta", author: "Kaisa Heikkinen" },
+  { title: "Mäentie", genre: "Romaani", author: "Aapo Mäkinen" },
+  { title: "Suomen historia", genre: "Historia", author: "Mustafa Omar" },
+  { title: "Matematiikan kauheudet", genre: "Kauhu", author: "Samu Posio" },
 ];
 
 const form = document.getElementById("book-search-form");

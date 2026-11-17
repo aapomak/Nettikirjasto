@@ -361,27 +361,11 @@
       }
 
       .book-cover {
-        display: grid;
-        min-height: 245px;
-        place-items: center;
-        padding: 20px;
+        display: block;
+        width: 100%;
+        aspect-ratio: 8 / 11;
+        object-fit: cover;
         border: 1px solid rgb(32 55 47 / 12%);
-        background: #d9e3da;
-        color: #64736a;
-        font-size: 0.78rem;
-        text-align: center;
-      }
-
-      .book:nth-child(2) .book-cover {
-        background: #ead9ca;
-      }
-
-      .book:nth-child(3) .book-cover {
-        background: #e5e2c9;
-      }
-
-      .book:nth-child(4) .book-cover {
-        background: #d7dfe3;
       }
 
       .book h3 {
@@ -489,11 +473,6 @@
 
         .book-grid {
           gap: 16px 12px;
-        }
-
-        .book-cover {
-          min-height: 190px;
-          padding: 12px;
         }
 
         .section {
