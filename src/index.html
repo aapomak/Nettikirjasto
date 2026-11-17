@@ -9,6 +9,7 @@
       content="Posionmäen kirjaston verkkokirjasto – löydä luettavaa ja tutustu kirjaston palveluihin."
     />
     <title>Posionmäen kirjasto – Nettikirjasto</title>
+    <script src="toiminto.js" defer></script>
   </head>
   <body>
     <div class="topline">Tervetuloa lukemisen äärelle</div>
@@ -40,10 +41,42 @@
             Tutustu kirjoihin, löydä uutta luettavaa ja tule viihtymään
             Posionmäen kirjastoon.
           </p>
-          <div class="search-placeholder" aria-label="Kirjahaku paikan varaus">
-            <span class="search-icon" aria-hidden="true"></span>
-            <span>Kirjahaku – tähän tulee hakukenttä</span>
-          </div>
+          <form class="search-form" id="book-search-form" role="search">
+            <label class="visually-hidden" for="book-search">
+              Hae kirjan nimellä, tekijällä tai aiheella
+            </label>
+            <div class="search-control">
+              <span class="search-icon" aria-hidden="true"></span>
+              <input
+                id="book-search"
+                name="q"
+                type="search"
+                placeholder="Kirjan nimi, tekijä tai aihe"
+                autocomplete="off"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-haspopup="listbox"
+                aria-controls="search-suggestions"
+                aria-expanded="false"
+              />
+              <button type="submit">Hae</button>
+            </div>
+            <ul
+              class="search-suggestions"
+              id="search-suggestions"
+              role="listbox"
+              aria-label="Hakuehdotukset"
+              hidden
+            ></ul>
+            <p class="search-status" id="search-status" aria-live="polite">              Hakuun ei ole vielä lisätty kirjoja.
+            </p>
+            <section
+              class="search-results"
+              id="search-results"
+              aria-label="Haun tulokset"
+              hidden
+            ></section>
+          </form>
         </div>
       </section>
 
