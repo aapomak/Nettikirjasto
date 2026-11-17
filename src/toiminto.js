@@ -8,7 +8,8 @@ const books = [
   { title: "Matematiikan kauheudet", genre: "Kauhu", author: "Samu Posio" },
   { title: "Geometricaalinen Syöksy", genre: "Romaani", author: "Joe Metri Dash" },
   { title: "ST1 Suur Ryöstö", genre: "Rikos", author: "Niko Harakka" },
-  { title: "Smarketin Tapaturma", genre: "Rikos", author: "Miro Posio" }
+  { title: "Smarketin Tapaturma", genre: "Rikos", author: "Miro Posio" },
+  { title: "Tokmannin kellari hirviö", genre: "Kauhu", author: "Nimetön Työntekijä" }
 ];
 
 const form = document.getElementById("book-search-form");
