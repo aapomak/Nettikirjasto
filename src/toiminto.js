@@ -12,6 +12,7 @@ const books = [
   { title: "Tokmannin kellari hirviö", genre: "Kauhu", author: "Nimetön Työntekijä" }
 ];
 
+// Haku koodin alku.
 const form = document.getElementById("book-search-form");
 const input = document.getElementById("book-search");
 const suggestions = document.getElementById("search-suggestions");
