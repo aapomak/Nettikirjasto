@@ -6,6 +6,9 @@ const books = [
   { title: "Mäentie", genre: "Romaani", author: "Aapo Mäkinen" },
   { title: "Suomen historia", genre: "Historia", author: "Mustafa Omar" },
   { title: "Matematiikan kauheudet", genre: "Kauhu", author: "Samu Posio" },
+  { title: "Geometricaalinen Syöksy", genre: "Romaani", author: "Joe Metri Dash" },
+  { title: "ST1 Suur Ryöstö", genre: "Rikos", author: "Niko Harakka" },
+  { title: "Smarketin Tapaturma", genre: "Rikos", author: "Miro Posio" }
 ];
 
 const form = document.getElementById("book-search-form");
