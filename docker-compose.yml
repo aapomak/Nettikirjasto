@@ -15,7 +15,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: Nettikirjasto_Tietokanta
-      MYSQL_USER: user
+      MYSQL_USER: user1
       MYSQL_PASSWORD: pass
     ports:
       - "3307:3306"
@@ -35,8 +35,8 @@ services:
       - "8083:80"
     environment:
       PMA_HOST: db
-      PMA_USER: user
-      PMA_PASSWORD: pass
+      PMA_USER: user1 
+      PMA_PASSWORD: pass 
     depends_on:
       db:
         condition: service_healthy
