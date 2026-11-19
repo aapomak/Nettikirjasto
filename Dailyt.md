@@ -18,4 +18,12 @@ Aapo: Kirjautuminen ja Rekisteröinti toimintojen aloitus
 
 Samu: Kirjojen lisäys ja Kirjasto osion parannus
 
-#############################¤
+#############################
+
+Päivä 4.
+
+Aapo: Jatkaa päivä 3 töitä
+
+Samu: Jatkaa päviä 3 töitä
+
+#############################
