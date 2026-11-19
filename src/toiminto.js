@@ -10,7 +10,8 @@ const books = [
   { title: "ST1 Suur Ryöstö", genre: "Rikos", author: "Niko Harakka" },
   { title: "Smarketin Tapaturma", genre: "Rikos", author: "Miro Posio" },
   { title: "Tokmannin kellari hirviö", genre: "Kauhu", author: "Nimetön Työntekijä" },
-  { title: "Final Boss", genre: "drama", author: "Anu Saukko" }
+  { title: "Final Boss", genre: "drama", author: "Anu Saukko" },
+  { title: "Harakkojen salaisuus", genre: "Rikos", author: "Kaisa Heikkinen" },
 ];
 
 // Haku koodin alku.
