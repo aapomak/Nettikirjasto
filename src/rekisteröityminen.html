@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekisteröityminen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <main class="login-container">
+        <h1>Rekisteröidy</h1>
+
+        <div id="viesti" class="form-message" role="alert" hidden></div>
+
+        <form action="rekisteroi.php" method="POST">
+            <label for="username">Käyttäjänimi:</label>
+            <input type="text" id="username" name="username" minlength="3" maxlength="50" autocomplete="username" required>
+
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" maxlength="255" autocomplete="email" required>
+
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" name="password" minlength="8" autocomplete="new-password" required>
+
+            <label for="password_confirm">Salasana uudelleen:</label>
+            <input type="password" id="password_confirm" name="password_confirm" minlength="8" autocomplete="new-password" required>
+
+            <button type="submit">Luo tili</button>
+        </form>
+
+        <p>Onko sinulla jo tili? <a href="kirjaudu.html">Kirjaudu sisään</a></p>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const viesti = document.getElementById("viesti");
+        const virheet = {
+            1: "Täytä kaikki kentät.",
+            2: "Anna kelvollinen sähköpostiosoite.",
+            3: "Salasanan tulee olla vähintään 8 merkkiä.",
+            4: "Salasanat eivät täsmää.",
+            5: "Käyttäjänimi tai sähköposti on jo käytössä.",
+            6: "Rekisteröitymisessä tapahtui virhe."
+        };
+
+        if (params.has("virhe")) {
+            viesti.textContent = virheet[params.get("virhe")] || "Rekisteröitymisessä tapahtui virhe.";
+            viesti.hidden = false;
+        }
+
+        if (params.has("onnistui")) {
+            viesti.textContent = "Tili luotiin onnistuneesti. Voit nyt kirjautua sisään.";
+            viesti.className = "form-message success";
+            viesti.hidden = false;
+        }
+    </script>
+</body>
+</html>

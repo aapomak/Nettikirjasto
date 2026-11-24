@@ -18,4 +18,4 @@ Aapo: Kirjautuminen ja Rekisteröinti toimintojen aloitus
 
 Samu: Kirjojen lisäys ja Kirjasto osion parannus
 
-#############################¤
+##############################
