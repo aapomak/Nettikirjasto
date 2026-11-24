@@ -12,6 +12,9 @@ const books = [
   { title: "Tokmannin kellari hirviö", genre: "Kauhu", author: "Nimetön Työntekijä" },
   { title: "Final Boss", genre: "drama", author: "Anu Saukko" },
   { title: "Harakkojen salaisuus", genre: "Rikos", author: "Kaisa Heikkinen" },
+  { title: "Niko Files", genre: "Rikos", author: "Joonatan Soranta" },
+  { title: "Suvun Kumivene", genre: "Romaani", author: "Kaisa Heikkinen" },
+  { title: "harakan elämä 2", genre: "Elämän kerta", author: "Kaisa Heikkinen" }, 
 ];
 
 // Haku koodin alku.
