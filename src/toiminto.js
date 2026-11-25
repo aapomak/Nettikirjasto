@@ -9,7 +9,12 @@ const books = [
   { title: "Geometricaalinen Syöksy", genre: "Romaani", author: "Joe Metri Dash" },
   { title: "ST1 Suur Ryöstö", genre: "Rikos", author: "Niko Harakka" },
   { title: "Smarketin Tapaturma", genre: "Rikos", author: "Miro Posio" },
-  { title: "Tokmannin kellari hirviö", genre: "Kauhu", author: "Nimetön Työntekijä" }
+  { title: "Tokmannin kellari hirviö", genre: "Kauhu", author: "Nimetön Työntekijä" },
+  { title: "Final Boss", genre: "drama", author: "Anu Saukko" },
+  { title: "Harakkojen salaisuus", genre: "Rikos", author: "Kaisa Heikkinen" },
+  { title: "Niko Files", genre: "Rikos", author: "Joonatan Soranta" },
+  { title: "Suvun Kumivene", genre: "Romaani", author: "Kaisa Heikkinen" },
+  { title: "harakan elämä 2", genre: "Elämän kerta", author: "Kaisa Heikkinen" }, 
 ];
 
 // Haku koodin alku.
@@ -30,7 +35,7 @@ function normalize(value) {
 }
 
 function getBookFields(book) {
-  return [book.title, book.author, book.category].filter(Boolean);
+  return [book.title, book.author, book.genre].filter(Boolean);
 }
 
 function findBooks(query) {
@@ -81,7 +86,7 @@ function renderSuggestions(matches) {
     option.setAttribute("role", "option");
     option.setAttribute("aria-selected", "false");
     title.textContent = book.title;
-    details.textContent = [book.author, book.category]
+    details.textContent = [book.author, book.genre]
       .filter(Boolean)
       .join(" · ");
     option.append(title, details);
@@ -103,7 +108,7 @@ function renderResults(matches) {
 
     article.className = "search-result";
     title.textContent = book.title;
-    details.textContent = [book.author, book.category]
+    details.textContent = [book.author, book.genre]
       .filter(Boolean)
       .join(" · ");
     article.append(title, details);
