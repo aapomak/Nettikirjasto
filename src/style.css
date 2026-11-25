@@ -37,6 +37,26 @@
         text-align: center;
       }
 
+      .topline-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 20px;
+      }
+
+      .account-status {
+        margin-left: 0;
+        text-align: left;
+      }
+
+      .account-status a {
+        color: #f8f6ed;
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
       header {
         background: var(--white);
         border-bottom: 1px solid var(--line);
@@ -441,6 +461,100 @@
       footer p {
         margin: 0;
         font-size: 0.86rem;
+      }
+
+      .login-container {
+        width: min(420px, calc(100% - 32px));
+        margin: 64px auto;
+        padding: 32px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--white);
+      }
+
+      .auth-page {
+        display: grid;
+        min-height: 100vh;
+        padding: 24px 0;
+        place-items: center;
+      }
+
+      .auth-page .login-container {
+        margin: 0 auto;
+      }
+
+      .login-container h1 {
+        margin-bottom: 24px;
+        font-size: 2.2rem;
+        letter-spacing: -0.03em;
+      }
+
+      .login-container form {
+        display: grid;
+        gap: 8px;
+      }
+
+      .login-container label {
+        margin-top: 5px;
+        color: #485b50;
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      .login-container input {
+        min-height: 46px;
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d5ddd3;
+        border-radius: 4px;
+        background: var(--white);
+        color: var(--ink);
+        font: inherit;
+      }
+
+      .login-container input:focus {
+        border-color: var(--green);
+        outline: 2px solid rgb(40 75 62 / 18%);
+      }
+
+      .login-container button {
+        min-height: 46px;
+        margin-top: 16px;
+        border: 0;
+        border-radius: 4px;
+        background: var(--green);
+        color: var(--white);
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+      }
+
+      .login-container p {
+        margin: 20px 0 0;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .login-container a {
+        color: var(--green);
+        font-weight: 600;
+      }
+
+      .form-message {
+        margin-bottom: 18px;
+        padding: 10px 12px;
+        border: 1px solid #d8a28a;
+        border-radius: 4px;
+        background: #fbeee8;
+        color: #7d3c24;
+        font-size: 0.88rem;
+      }
+
+      .form-message.success {
+        border-color: #b5c9ba;
+        background: var(--green-light);
+        color: var(--green);
       }
 
       .footer-muted {
