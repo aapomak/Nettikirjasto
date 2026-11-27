@@ -186,6 +186,40 @@ if (detail) {
 
 document.querySelectorAll(".book[data-book-id]").forEach(setupBookCard);
 
+const catalogFilters = document.querySelectorAll("[data-category-filter]");
+const catalogBooks = document.querySelectorAll(".catalog-book[data-category]");
+const catalogCount = document.getElementById("catalog-count");
+const catalogEmpty = document.getElementById("catalog-empty");
+
+catalogFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    const category = button.dataset.categoryFilter;
+    let visibleCount = 0;
+
+    catalogFilters.forEach((filter) => {
+      const isActive = filter === button;
+      filter.classList.toggle("is-active", isActive);
+      filter.setAttribute("aria-pressed", String(isActive));
+    });
+
+    catalogBooks.forEach((book) => {
+      const isVisible = category === "all" || book.dataset.category === category;
+      book.hidden = !isVisible;
+      visibleCount += Number(isVisible);
+    });
+
+    if (catalogCount) {
+      catalogCount.textContent = `Näytetään ${visibleCount} ${
+        visibleCount === 1 ? "kirja" : "kirjaa"
+      }`;
+    }
+
+    if (catalogEmpty) {
+      catalogEmpty.hidden = visibleCount > 0;
+    }
+  });
+});
+
 document.addEventListener("click", (event) => {
   const card = event.target.closest("[data-book-id]");
 

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Kirjat – Posionmäen kirjasto</title>
   </head>
-  <body>
+  <body class="catalog-page">
     <div class="topline">Tervetuloa lukemisen äärelle</div>
 
     <header>
@@ -25,149 +25,116 @@
     </header>
 
     <main>
-      <section class="section">
+      <section class="catalog-hero">
+        <div class="container catalog-hero-inner">
+          <div class="catalog-hero-copy">
+            <p class="catalog-eyebrow">Posionmäen kirjaston kokoelma</p>
+            <h1>Jokaisella kirjalla on oma maailmansa.</h1>
+            <p>
+              Löydä seuraava suosikkisi romaanien, rikosten, kauhun ja tositarinoiden joukosta.
+            </p>
+            <a class="catalog-cta" href="#catalog">Tutustu kirjoihin <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="catalog-showcase" aria-hidden="true">
+            <img class="showcase-cover showcase-cover-back" src="kuvat/Harakan_elämä.jpg" alt="" />
+            <img class="showcase-cover showcase-cover-front" src="kuvat/Mäentie.jpg" alt="" />
+            <img class="showcase-cover showcase-cover-side" src="kuvat/ST1_Ryöstö.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalog">
         <div class="container">
-          <div class="section-heading">
-            <h2>Kirjat</h2>
+          <div class="catalog-heading">
+            <div>
+              <p class="catalog-eyebrow">Löydä oma seuraava lukuelämys</p>
+              <h2>Kirjahylly</h2>
+            </div>
+            <p id="catalog-count" class="catalog-count" aria-live="polite">
+              8 kirjaa kokoelmassa
+            </p>
           </div>
 
-          <!-- Romaanit -->
-          <section class="catalog-category" aria-labelledby="romaanit">
-            <div class="section-heading">
-              <h2 id="romaanit">Romaanit</h2>
+          <div class="catalog-toolbar">
+            <div class="catalog-filters" role="group" aria-label="Rajaa kirjoja aihealueen mukaan">
+              <button class="catalog-filter is-active" type="button" data-category-filter="all" aria-pressed="true">Kaikki <span>8</span></button>
+              <button class="catalog-filter" type="button" data-category-filter="romaani" aria-pressed="false">Romaanit <span>1</span></button>
+              <button class="catalog-filter" type="button" data-category-filter="elamankerta" aria-pressed="false">Elämänkerrat <span>1</span></button>
+              <button class="catalog-filter" type="button" data-category-filter="kauhu" aria-pressed="false">Kauhu <span>2</span></button>
+              <button class="catalog-filter" type="button" data-category-filter="historia" aria-pressed="false">Historia <span>1</span></button>
+              <button class="catalog-filter" type="button" data-category-filter="rikos" aria-pressed="false">Rikos <span>2</span></button>
+              <button class="catalog-filter" type="button" data-category-filter="draama" aria-pressed="false">Draama <span>1</span></button>
             </div>
-            <div class="book-grid">
-              <a class="book" data-book-id="maentie" href="kirja.html?id=maentie">
-                <img
-                  class="book-cover"
-                  src="kuvat/Mäentie.jpg"
-                  alt="Mäentie-kirjan kansi"
-                  loading="lazy"
-                />
+            <p class="catalog-hint">Valitse kirja nähdäksesi sen tiedot.</p>
+          </div>
+
+          <div class="book-grid catalog-grid" id="catalog-grid">
+            <a class="book catalog-book" data-book-id="maentie" data-category="romaani" href="kirja.html?id=maentie">
+              <img class="book-cover" src="kuvat/Mäentie.jpg" alt="Mäentie-kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Romaani</span>
                 <h3>Mäentie</h3>
-                <p>Aapo Mäkinen · Romaani</p>
-              </a>
-
-            </div>
-          </section>
-
-          <!-- Elämänkerrat -->
-          <section class="catalog-category" aria-labelledby="elamankerrat">
-            <div class="section-heading">
-              <h2 id="elamankerrat">Elämänkerrat</h2>
-            </div>
-            <div class="book-grid">
-              <a class="book" data-book-id="harakan-elama" href="kirja.html?id=harakan-elama">
-                <img
-                  class="book-cover"
-                  src="kuvat/Harakan_elämä.jpg"
-                  alt="Harakan elämä -kirjan kansi"
-                  loading="lazy"
-                />
+                <p>Aapo Mäkinen</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="harakan-elama" data-category="elamankerta" href="kirja.html?id=harakan-elama">
+              <img class="book-cover" src="kuvat/Harakan_elämä.jpg" alt="Harakan elämä -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Elämänkerta</span>
                 <h3>Harakan elämä</h3>
-                <p>Kaisa Heikkinen · Elämän kerta</p>
-              </a>
-            </div>
-          </section>
-
-          <!-- Kauhu -->
-          <section class="catalog-category" aria-labelledby="kauhu">
-            <div class="section-heading">
-              <h2 id="kauhu">Kauhu</h2>
-            </div>
-            <div class="book-grid">
-              <a class="book" data-book-id="matematiikan-kauhut" href="kirja.html?id=matematiikan-kauhut">
-                <img
-                  class="book-cover"
-                  src="kuvat/Matematiikan_kauhut.jpg"
-                  alt="Matematiikan kauhut -kirjan kansi"
-                  loading="lazy"
-                />
+                <p>Kaisa Heikkinen</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="matematiikan-kauhut" data-category="kauhu" href="kirja.html?id=matematiikan-kauhut">
+              <img class="book-cover" src="kuvat/Matematiikan_kauhut.jpg" alt="Matematiikan kauhut -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Kauhu</span>
                 <h3>Matematiikan kauhut</h3>
-                <p>Samu Posio · Kauhu</p>
-              </a>
-
-              <a class="book" data-book-id="tokmannin-kellari-hirio" href="kirja.html?id=tokmannin-kellari-hirio">
-                <img
-                  class="book-cover"
-                  src="kuvat/Tokmanni.jpg"
-                  alt="Tokmannin Hirviö -kirjan kansi"
-                  loading="lazy"
-                />
+                <p>Samu Posio</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="tokmannin-kellari-hirio" data-category="kauhu" href="kirja.html?id=tokmannin-kellari-hirio">
+              <img class="book-cover" src="kuvat/Tokmanni.jpg" alt="Tokmannin kellari hirviö -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Kauhu</span>
                 <h3>Tokmannin kellari hirviö</h3>
-                <p>Nimetön Työntekijä · Kauhu</p>
-              </a>
-            </div>
-          </section>
-
-          <!-- Historia -->
-          <section class="catalog-category" aria-labelledby="historia">
-            <div class="section-heading">
-              <h2 id="historia">Historia</h2>
-            </div>
-            <div class="book-grid">
-              <a class="book" data-book-id="suomen-historia" href="kirja.html?id=suomen-historia">
-                <img
-                  class="book-cover"
-                  src="kuvat/Suomen_historia.jpg"
-                  alt="Suomen Historia -kirjan kansi"
-                  loading="lazy"
-                />
-                <h3>Suomen Historia</h3>
-                <p>Mustafa Omar · Historia</p>
-              </a>
-            </div>
-          </section>
-
-          <!-- Rikos -->
-          <section class="catalog-category" aria-labelledby="rikos">
-            <div class="section-heading">
-              <h2 id="rikos">Rikos</h2>
-            </div>
-            <div class="book-grid">
-              <a class="book" data-book-id="st1-suur-ryosto" href="kirja.html?id=st1-suur-ryosto">
-                <img
-                  class="book-cover"
-                  src="kuvat/ST1_Ryöstö.jpg"
-                  alt="ST1 Ryöstö -kirjan kansi"
-                  loading="lazy"
-                />
+                <p>Nimetön Työntekijä</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="suomen-historia" data-category="historia" href="kirja.html?id=suomen-historia">
+              <img class="book-cover" src="kuvat/Suomen_historia.jpg" alt="Suomen historia -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Historia</span>
+                <h3>Suomen historia</h3>
+                <p>Mustafa Omar</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="st1-suur-ryosto" data-category="rikos" href="kirja.html?id=st1-suur-ryosto">
+              <img class="book-cover" src="kuvat/ST1_Ryöstö.jpg" alt="ST1 Suur Ryöstö -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Rikos</span>
                 <h3>ST1 Suur Ryöstö</h3>
-                <p>Niko Harakka · Rikos</p>
-              </a>
-
-              <a class="book" data-book-id="smarketin-tapaturma" href="kirja.html?id=smarketin-tapaturma">
-                <img
-                  class="book-cover"
-                  src="kuvat/Smarket.jpg"
-                  alt="Smarketin Tapaturma -kirjan kansi"
-                  loading="lazy"
-                />
+                <p>Niko Harakka</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="smarketin-tapaturma" data-category="rikos" href="kirja.html?id=smarketin-tapaturma">
+              <img class="book-cover" src="kuvat/Smarket.jpg" alt="Smarketin Tapaturma -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Rikos</span>
                 <h3>Smarketin Tapaturma</h3>
-                <p>Miro Posio · Rikos</p>
-              </a>
-
-            </div>
-          </section>
-
-          <!-- Draama -->
-          <section class="catalog-category" aria-labelledby="draama">
-            <div class="section-heading">
-              <h2 id="draama">Draama</h2>
-            </div>
-            <div class="book-grid">
-              <a class="book" data-book-id="final-boss" href="kirja.html?id=final-boss">
-                <img
-                  class="book-cover"
-                  src="kuvat/anusaukko.jpg"
-                  alt="Paha ilkee kirja"
-                  loading="lazy"
-                />
+                <p>Miro Posio</p>
+              </div>
+            </a>
+            <a class="book catalog-book" data-book-id="final-boss" data-category="draama" href="kirja.html?id=final-boss">
+              <img class="book-cover" src="kuvat/anusaukko.jpg" alt="Final Boss -kirjan kansi" loading="lazy" />
+              <div class="catalog-book-info">
+                <span class="book-category">Draama</span>
                 <h3>Final Boss</h3>
-                <p>Anu Saukko · Draama</p>
-              </a>
-            </div>
-          </section>
+                <p>Anu Saukko</p>
+              </div>
+            </a>
+          </div>
+          <p class="catalog-empty" id="catalog-empty" hidden>Ei kirjoja tässä aihealueessa.</p>
         </div>
       </section>
     </main>

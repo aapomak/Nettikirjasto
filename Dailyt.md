@@ -33,3 +33,13 @@ Päivä 5.
 Mäkkärin Aapo jatkaa kirjautumista ja rekisteröintiä ihme pummi
 
 Samu: CSS kirjautumiselle ja Rekisteröinille
+
+#############################
+
+Päivä 6-7
+
+Niko: tekee sen kirjoja
+
+Samu: jatkaa kirjaston tekoa ylipäätään
+
+Aapo: pummii kotona eli ens viikolla tekee kaiken työn
