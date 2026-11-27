@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kirjan tiedot – Posionmäen kirjasto</title>
+    <script src="toiminto.js" defer></script>
+  </head>
+  <body>
+    <div class="topline">Tervetuloa lukemisen äärelle</div>
+
+    <header>
+      <div class="container header-main">
+        <div class="brand" aria-label="Posionmäen kirjasto">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>
+            <span class="brand-name">Posionmäen kirjasto</span>
+            <span class="brand-subtitle">Nettikirjasto</span>
+          </span>
+        </div>
+        <nav aria-label="Sivuston osiot">
+          <a href="index.php">Etusivu</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a class="book-back-link" id="book-back-link" href="index.php">
+            ← Takaisin
+          </a>
+          <p id="book-not-found" class="book-not-found" hidden>
+            Kirjan tietoja ei löytynyt. Palaa kirjastoon ja valitse kirja uudelleen.
+          </p>
+          <article class="book-detail" id="book-detail" hidden>
+            <img class="book-detail-cover" id="book-detail-image" src="" alt="" />
+            <div class="book-detail-content">
+              <p class="eyebrow" id="book-detail-genre"></p>
+              <h1 id="book-detail-title"></h1>
+              <p class="book-detail-author" id="book-detail-author"></p>
+              <p id="book-detail-description"></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>Posionmäen kirjasto</p>
+      </div>
+    </footer>
+  </body>
+</html>

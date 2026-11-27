@@ -102,26 +102,26 @@ $username = $loggedIn ? $_SESSION['username'] : '';
             <p class="section-note">Kirjaston nostoja juuri sinulle.</p>
           </div>
           <div class="book-grid">
-            <article class="book">
+            <a class="book" data-book-id="harakan-elama" href="kirja.html?id=harakan-elama">
               <img class="book-cover" src="kuvat/Harakan_elämä.jpg" alt="Harakan elämä -kirjan kansi" loading="lazy" />
               <h3>Harakan elämä</h3>
               <p>Kaisa Heikkinen · Elämän kerta</p>
-            </article>
-            <article class="book">
+            </a>
+            <a class="book" data-book-id="maentie" href="kirja.html?id=maentie">
               <img class="book-cover" src="kuvat/Mäentie.jpg" alt="Mäentie-kirjan kansi" loading="lazy" />
               <h3>Mäentie</h3>
               <p>Aapo Mäkinen · Romaani</p>
-            </article>
-            <article class="book">
+            </a>
+            <a class="book" data-book-id="suomen-historia" href="kirja.html?id=suomen-historia">
               <img class="book-cover" src="kuvat/Suomen_historia.jpg" alt="Suomen Historia -kirjan kansi" loading="lazy" />
               <h3>Suomen Historia</h3>
               <p>Mustafa Omar · Historia</p>
-            </article>
-            <article class="book">
+            </a>
+            <a class="book" data-book-id="matematiikan-kauhut" href="kirja.html?id=matematiikan-kauhut">
               <img class="book-cover" src="kuvat/Matematiikan_kauhut.jpg" alt="Matematiikan kauhut -kirjan kansi" loading="lazy" />
               <h3>Matematiikan kauhut</h3>
               <p>Samu Posio · Kauhu</p>
-            </article>
+            </a>
           </div>
         </div>
       </section>
