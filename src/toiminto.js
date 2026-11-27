@@ -22,7 +22,7 @@ const books = [
     title: "Suomen historia",
     genre: "Historia",
     author: "Mustafa Omar",
-    image: "kuvat/Suomen_historia.jpg",
+    image: "kuvat/Suomen_historia.jpg?v=2",
     description:
       "Selkeä katsaus Suomen historian vaiheisiin ja tapahtumiin, jotka ovat muovanneet maata.",
   },
@@ -102,8 +102,8 @@ const books = [
     id: "suvun-kumivene",
     title: "Suvun Kumivene",
     genre: "Romaani",
-    author: "Kaisa Heikkinen",
-    image: "kuvat/Mäentie.jpg",
+    author: "Mustafa Omar",
+    image: "kuvat/kumivene.jpg",
     description:
       "Suvun yhteinen retki kumiveneellä muuttuu kertomukseksi sukulaisista, muistoista ja yllätyksistä.",
   },
@@ -361,9 +361,11 @@ function submitSearch() {
 
   if (!query) {
     status.textContent = "Kirjoita kirjan nimi, tekijä tai aihe.";
+    status.classList.add("is-error");
     return;
   }
 
+  status.classList.remove("is-error");
   const matches = findBooks(query);
   renderResults(matches);
   status.textContent = matches.length
@@ -383,9 +385,11 @@ if (form && input && suggestions && status && results) {
     if (!query) {
       closeSuggestions();
       status.textContent = "Kirjoita kirjan nimi, tekijä tai aihe.";
+      status.classList.add("is-error");
       return;
     }
 
+    status.classList.remove("is-error");
     const matches = findBooks(query);
     renderSuggestions(matches);
     status.textContent = matches.length

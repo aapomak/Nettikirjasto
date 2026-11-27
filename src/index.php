@@ -113,7 +113,7 @@ $username = $loggedIn ? $_SESSION['username'] : '';
               <p>Aapo Mäkinen · Romaani</p>
             </a>
             <a class="book" data-book-id="suomen-historia" href="kirja.html?id=suomen-historia">
-              <img class="book-cover" src="kuvat/Suomen_historia.jpg" alt="Suomen Historia -kirjan kansi" loading="lazy" />
+              <img class="book-cover" src="kuvat/Suomen_historia.jpg?v=2" alt="Suomen Historia -kirjan kansi" loading="lazy" />
               <h3>Suomen Historia</h3>
               <p>Mustafa Omar · Historia</p>
             </a>
@@ -141,9 +141,9 @@ $username = $loggedIn ? $_SESSION['username'] : '';
             <p class="eyebrow">Tule käymään</p>
             <h2>Aukioloajat</h2>
             <div class="hours-list">
-              <span>Maanantai–perjantai</span><span>09-17</span>
-              <span>Lauantai</span><span>03-07</span>
-              <span>Sunnuntai</span><span>20-22</span>
+              <span>Maanantai–perjantai</span><span>09 - 17</span>
+              <span>Lauantai</span><span>10 - 17</span>
+              <span>Sunnuntai</span><span>13 - 17</span>
             </div>
           </article>
         </div>
@@ -154,7 +154,7 @@ $username = $loggedIn ? $_SESSION['username'] : '';
       <div class="container footer-content">
         <p>Posionmäen kirjasto</p>
         <p class="footer-muted">Posionmäentie 13, 67470 Posionmäki</p>
-        <p class="footer-muted">Puhelin: 0123456789</p>
+        <p class="footer-muted">Puhelin: 045 123 4767</p>
         <p class="footer-muted">Sähköposti: info@posionmäenkirjasto.fi</p>
       </div>
     </footer>

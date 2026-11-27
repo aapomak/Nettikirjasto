@@ -371,6 +371,12 @@ h1 {
   font-size: 0.82rem;
 }
 
+.search-status.is-error {
+  color: #c62828;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 .search-results {
   display: grid;
   gap: 8px;
@@ -851,6 +857,32 @@ h1 {
   font-weight: 600;
 }
 
+#reserve-button {
+  min-height: 46px;
+  margin-top: 8px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 7px 16px rgb(33 77 61 / 16%);
+  color: var(--white);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+#reserve-button:hover {
+  background: var(--green-2);
+  box-shadow: 0 9px 20px rgb(33 77 61 / 22%);
+  transform: translateY(-1px);
+}
+
+#reserve-button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
 .book-not-found {
   margin-top: 16px;
 }
@@ -1205,4 +1237,5 @@ footer p {
   .login-container {
     padding: 28px 22px;
   }
+
 }
