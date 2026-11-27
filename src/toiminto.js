@@ -1,6 +1,7 @@
 const books = [
   {
     id: "harakan-elama",
+    quantity: 3,
     title: "Harakan elämä",
     genre: "Elämän kerta",
     author: "Kaisa Heikkinen",
@@ -10,6 +11,7 @@ const books = [
   },
   {
     id: "maentie",
+    quantity: 5,
     title: "Mäentie",
     genre: "Romaani",
     author: "Aapo Mäkinen",
@@ -19,6 +21,7 @@ const books = [
   },
   {
     id: "suomen-historia",
+    quantity: 2,
     title: "Suomen historia",
     genre: "Historia",
     author: "Mustafa Omar",
@@ -28,6 +31,7 @@ const books = [
   },
   {
     id: "matematiikan-kauhut",
+    quantity: 4,
     title: "Matematiikan kauhut",
     genre: "Kauhu",
     author: "Samu Posio",
@@ -37,6 +41,7 @@ const books = [
   },
   {
     id: "geometricaalinen-syoksy",
+    quantity: 2,
     title: "Geometricaalinen Syöksy",
     genre: "Romaani",
     author: "Joe Metri Dash",
@@ -46,6 +51,7 @@ const books = [
   },
   {
     id: "st1-suur-ryosto",
+    quantity: 5,
     title: "ST1 Suur Ryöstö",
     genre: "Rikos",
     author: "Niko Harakka",
@@ -55,6 +61,7 @@ const books = [
   },
   {
     id: "smarketin-tapaturma",
+    quantity: 3,
     title: "Smarketin Tapaturma",
     genre: "Rikos",
     author: "Miro Posio",
@@ -64,6 +71,7 @@ const books = [
   },
   {
     id: "tokmannin-kellari-hirio",
+    quantity: 4,
     title: "Tokmannin kellari hirviö",
     genre: "Kauhu",
     author: "Nimetön Työntekijä",
@@ -73,6 +81,7 @@ const books = [
   },
   {
     id: "final-boss",
+    quantity: 2,
     title: "Final Boss",
     genre: "Draama",
     author: "Anu Saukko",
@@ -82,6 +91,7 @@ const books = [
   },
   {
     id: "harakkojen-salaisuus",
+    quantity: 5,
     title: "Harakkojen salaisuus",
     genre: "Rikos",
     author: "Kaisa Heikkinen",
@@ -91,6 +101,7 @@ const books = [
   },
   {
     id: "niko-files",
+    quantity: 3,
     title: "Niko Files",
     genre: "Rikos",
     author: "Joonatan Soranta",
@@ -100,6 +111,7 @@ const books = [
   },
   {
     id: "suvun-kumivene",
+    quantity: 4,
     title: "Suvun Kumivene",
     genre: "Romaani",
     author: "Mustafa Omar",
@@ -109,6 +121,7 @@ const books = [
   },
   {
     id: "harakan-elama-2",
+    quantity: 2,
     title: "Harakan elämä 2",
     genre: "Elämän kerta",
     author: "Kaisa Heikkinen",
@@ -134,6 +147,11 @@ function setupBookCard(card) {
 
   if (!book) {
     return;
+  }
+
+  const quantity = card.querySelector("[data-book-quantity]");
+  if (quantity) {
+    quantity.textContent = `Kirjastossa: ${book.quantity} kpl`;
   }
 
   if (card.tagName !== "A") {
@@ -177,6 +195,8 @@ function renderBookDetail() {
   document.getElementById("book-detail-genre").textContent = book.genre;
   document.getElementById("book-detail-description").textContent =
     book.description;
+  document.getElementById("book-detail-quantity").textContent =
+    `Kirjastossa: ${book.quantity} kpl`;
   detail.hidden = false;
 }
 
